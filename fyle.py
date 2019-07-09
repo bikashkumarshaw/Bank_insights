@@ -73,7 +73,7 @@ def get_bank_details():
 
     if bank_name and city:
         sq_query = _get_sql_query("branch_details")
-        sq_query = sq_query.format(bank_name, city, start, end)
+        sq_query = sq_query.format(bank_name.upper(), city, start, end)
     else:
         sq_query = _get_sql_query("bank_details")
 
